@@ -11,14 +11,14 @@ package Assignment_1;
 public class EmployeeList {
     
     private String name;
-    private int    emp_id;
+    private double    emp_id;
     private int    age;
     private String gender;
     private String start_date;
     private String level;
     private String team_info;
     private String position;
-    private int phone_number;
+    private double phone_number;
     private String email;
 
     public String getName() {
@@ -29,17 +29,17 @@ public class EmployeeList {
         this.name = name;
     }
 
-    public int getEmp_id(String text) {
+    public double getEmp_id() {
         return emp_id;
     }
 
-    public void setEmp_id(int emp_id) {
+    public void setEmp_id(double emp_id) {
         this.emp_id = emp_id;
     }
 
     
 
-    public int getAge(String text) {
+    public int getAge() {
         return age;
     }
 
@@ -87,11 +87,11 @@ public class EmployeeList {
         this.position = position;
     }
 
-    public int getPhone_number() {
+    public double getPhone_number() {
         return phone_number;
     }
 
-    public void setPhone_number(int phone_number) {
+    public void setPhone_number(double phone_number) {
         this.phone_number = phone_number;
     }
 
@@ -102,7 +102,8 @@ public class EmployeeList {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
+   
     
             
     

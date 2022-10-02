@@ -202,14 +202,14 @@ public class createJpanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
     String name = txtName.getText();
-    int    emp_id = Integer.parseInt(txtEmpId.getText());
+    double   emp_id = Double.parseDouble(txtEmpId.getText());
     int    age= Integer.parseInt(txtAge.getText());
     String gender = txtGender.getText();
     String start_date = txtStartDate.getText();
     String level = txtLevel.getText();
     String team_info = txtTeamInfo.getText();
     String position = txtPositionTitle.getText();
-    int phone_number = Integer.parseInt(txtPhoneNumber.getText());
+    double phone_number = Double.parseDouble(txtPhoneNumber.getText());
     String email = txtEmail.getText();
     
     EmployeeList employee = directory.addEmployee();
