@@ -6,6 +6,9 @@ package UI;
 
 import Assignment_1.EmployeeHistory;
 import Assignment_1.EmployeeList;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -45,7 +48,7 @@ public class readJpanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDirectory = new javax.swing.JTable();
-        btndelete = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
         jScrollBar1 = new javax.swing.JScrollBar();
         lblPhoneNumber = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
@@ -67,6 +70,7 @@ public class readJpanel extends javax.swing.JPanel {
         txtPhoneNumber = new javax.swing.JTextField();
         lblPositionTitle = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
+        btnView = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,10 +100,10 @@ public class readJpanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblDirectory);
 
-        btndelete.setText("Delete");
-        btndelete.addActionListener(new java.awt.event.ActionListener() {
+        btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btndeleteActionPerformed(evt);
+                btnDeleteActionPerformed(evt);
             }
         });
 
@@ -138,6 +142,13 @@ public class readJpanel extends javax.swing.JPanel {
 
         lblEmail.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         lblEmail.setText("Email                   :");
+
+        btnView.setText("View");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -180,7 +191,9 @@ public class readJpanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btndelete)
+                .addComponent(btnView)
+                .addGap(18, 18, 18)
+                .addComponent(btnDelete)
                 .addGap(372, 372, 372))
         );
         layout.setVerticalGroup(
@@ -193,7 +206,9 @@ public class readJpanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btndelete)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnDelete)
+                            .addComponent(btnView))
                         .addGap(3, 3, 3)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblName)
@@ -242,29 +257,65 @@ public class readJpanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
 
-        DefaultTableModel model = (DefaultTableModel) tblDirectory.getModel();
-        int[] rows = tblDirectory.getSelectedRows();
-        for(int i=0;i<rows.length;i++){
-        model.removeRow(rows[i]-i);
-        
+        int selectedRowIndex = tblDirectory.getSelectedRow();
+        if(selectedRowIndex<0){
+            JOptionPane.showMessageDialog(this, "Please select employee profile to delete");
+            return;
         }
-
-
+        DefaultTableModel model = (DefaultTableModel) tblDirectory.getModel();
+        EmployeeList selectedEmployee = (EmployeeList) model.getValueAt(selectedRowIndex, 0);
+        directory.deleteEmployee(selectedEmployee);
+        JOptionPane.showMessageDialog(this, "Employee Profile Deleted");
+        populateTable();
+        
+        
+        
+        
+        
 
 
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_btndeleteActionPerformed
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void txtEmpIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmpIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmpIdActionPerformed
 
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+      
+    int selectedRowIndex = tblDirectory.getSelectedRow();
+        if(selectedRowIndex<0){
+            JOptionPane.showMessageDialog(this, "Please select an employee profile to delete");
+            return;
+        }
+     DefaultTableModel model = (DefaultTableModel) tblDirectory.getModel();
+     EmployeeList selectedEmployee = (EmployeeList) model.getValueAt(selectedRowIndex, 0);
+     txtName.setText(String.valueOf(selectedEmployee.getName()));
+     txtEmpId.setText(selectedEmployee.getEmpId());
+     txtAge.setText(selectedEmployee.getAge());
+     txtGender.setText(selectedEmployee.getGender());
+     txtStartDate.setText(selectedEmployee.getStartDate());
+     txtLevel.setText(selectedEmployee.getLevel());
+     txtTeamInfo.setText(selectedEmployee.getTeamInfo());
+     txtPositionTitle.setText(selectedEmployee.getPositionTitle());
+     txtPhoneNumber.setText(selectedEmployee.getPhoneNumber());
+     txtEmail.setText(selectedEmployee.getEmail());
+     
+     
+        
+        
+
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_btnViewActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btndelete;
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnView;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollBar jScrollBar1;
@@ -302,14 +353,14 @@ public class readJpanel extends javax.swing.JPanel {
             
             Object[] row = new Object[10];
             row[0]= employee.getName();
-            row[1]=employee.getEmp_id();
+            row[1]=employee.getEmpId();
             row[2]=employee.getAge();
             row[3]=employee.getGender();
-            row[4]=employee.getStart_date();
+            row[4]=employee.getStartDate();
             row[5]=employee.getLevel();
-            row[6]=employee.getTeam_info();
-            row[7]=employee.getPosition();
-            row[8]=employee.getPhone_number();
+            row[6]=employee.getTeamInfo();
+            row[7]=employee.getPositionTitle();
+            row[8]=employee.getPhoneNumber();
             row[9]=employee.getEmail();
             
             

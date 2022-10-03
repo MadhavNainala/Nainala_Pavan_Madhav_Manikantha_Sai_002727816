@@ -11,14 +11,14 @@ package Assignment_1;
 public class EmployeeList {
     
     private String name;
-    private double    emp_id;
-    private int    age;
+    private String empId;
+    private String age;
     private String gender;
-    private String start_date;
+    private String startDate;
     private String level;
-    private String team_info;
-    private String position;
-    private double phone_number;
+    private String teamInfo;
+    private String positionTitle;
+    private String phoneNumber;
     private String email;
 
     public String getName() {
@@ -29,21 +29,19 @@ public class EmployeeList {
         this.name = name;
     }
 
-    public double getEmp_id() {
-        return emp_id;
+    public String getEmpId() {
+        return empId;
     }
 
-    public void setEmp_id(double emp_id) {
-        this.emp_id = emp_id;
+    public void setEmpId(String empId) {
+        this.empId = empId;
     }
 
-    
-
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -55,12 +53,12 @@ public class EmployeeList {
         this.gender = gender;
     }
 
-    public String getStart_date() {
-        return start_date;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public void setStart_date(String start_date) {
-        this.start_date = start_date;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
     public String getLevel() {
@@ -71,28 +69,30 @@ public class EmployeeList {
         this.level = level;
     }
 
-    public String getTeam_info() {
-        return team_info;
+    public String getTeamInfo() {
+        return teamInfo;
     }
 
-    public void setTeam_info(String team_info) {
-        this.team_info = team_info;
+    public void setTeamInfo(String teamInfo) {
+        this.teamInfo = teamInfo;
     }
 
-    public String getPosition() {
-        return position;
+    public String getPositionTitle() {
+        return positionTitle;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setPositionTitle(String positionTitle) {
+        this.positionTitle = positionTitle;
     }
 
-    public double getPhone_number() {
-        return phone_number;
+    
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(double phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
@@ -102,9 +102,8 @@ public class EmployeeList {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    
+    
 
-   
-    
-            
-    
 }

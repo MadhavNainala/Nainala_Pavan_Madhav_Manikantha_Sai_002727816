@@ -201,47 +201,44 @@ public class createJpanel extends javax.swing.JPanel {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         
-    String name = txtName.getText();
-    double   emp_id = Double.parseDouble(txtEmpId.getText());
-    int    age= Integer.parseInt(txtAge.getText());
-    String gender = txtGender.getText();
-    String start_date = txtStartDate.getText();
-    String level = txtLevel.getText();
-    String team_info = txtTeamInfo.getText();
-    String position = txtPositionTitle.getText();
-    double phone_number = Double.parseDouble(txtPhoneNumber.getText());
-    String email = txtEmail.getText();
-    
-    EmployeeList employee = directory.addEmployee();
-    
-    
-    employee.setName(name);
-    employee.setEmp_id(emp_id);
-    employee.setAge(age);
-    employee.setGender(gender);
-    employee.setStart_date(start_date);
-    employee.setLevel(level);
-    employee.setTeam_info(team_info);
-    employee.setPosition(position);
-    employee.setPhone_number(phone_number);
-    employee.setEmail(email);
-    
-    
-    JOptionPane.showMessageDialog(this,"Employee Information Saved");
-    
-    
-    txtName.setText("");
-    txtEmpId.setText("");
-    txtAge.setText("");
-    txtGender.setText("");
-    txtStartDate.setText("");
-    txtLevel.setText("");
-    txtTeamInfo.setText("");
-    txtPositionTitle.setText("");
-    txtPhoneNumber.setText("");
-    txtEmail.setText("");
-    
-    
+        String name = txtName.getText();
+        String empId= txtEmpId.getText();
+        String age = txtAge.getText();
+        String gender = txtGender.getText();
+        String startDate = txtStartDate.getText();
+        String level = txtLevel.getText();
+        String teamInfo = txtTeamInfo.getText();
+        String position = txtPositionTitle.getText();
+        String phoneNumber = txtPhoneNumber.getText();
+        String email = txtEmail.getText();
+        //ImageIcon imageIcon = new ImageIcon(selectedImagePath);
+       
+        
+        EmployeeList employee=directory.addEmployee();
+        employee.setName(name);
+        employee.setEmpId(empId);
+        employee.setAge(age);
+        employee.setGender(gender);
+        employee.setStartDate(startDate);
+        employee.setLevel(level);
+        employee.setPositionTitle(position);
+        employee.setPhoneNumber(phoneNumber);
+        employee.setEmail(email);
+        
+        
+       JOptionPane.showMessageDialog(this, "Employee Information Saved");
+        
+        txtName.setText("");
+        txtEmpId.setText("");
+        txtAge.setText("");
+        txtGender.setText("");
+        txtStartDate.setText("");
+        txtLevel.setText("");
+        txtTeamInfo.setText("");
+        txtPositionTitle.setText("");
+        txtPhoneNumber.setText("");
+        txtEmail.setText("");
+        
     
     
     

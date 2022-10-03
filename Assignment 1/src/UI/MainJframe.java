@@ -70,6 +70,11 @@ public class MainJframe extends javax.swing.JFrame {
         });
 
         jButton2.setText("Search");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
@@ -161,8 +166,16 @@ public class MainJframe extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         updateJpanel updatePanel = new updateJpanel(directory);
-        splitPane.setRightComponent(updatePanel);  
+        splitPane.setRightComponent(updatePanel);   
+          
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+         searchJpanel searchPanel = new searchJpanel(directory);
+         splitPane.setRightComponent(searchPanel);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
 

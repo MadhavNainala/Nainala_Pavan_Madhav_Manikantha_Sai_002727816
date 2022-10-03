@@ -37,4 +37,16 @@ public class EmployeeHistory {
         
     }
     
+    public void deleteEmployee(EmployeeList employee){
+        directory.remove(employee);
+        
+    }
+    
+    
+    public void updateEmployee(EmployeeList employee){
+        
+        directory.set(0, employee);
+    }
+            
+    
 }
