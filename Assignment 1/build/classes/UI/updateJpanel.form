@@ -38,7 +38,7 @@
                           <Component id="txtEmpId" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtAge" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtGender" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtStartdate" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtStartDate" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtLevel" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtTeamInfo" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtPositionTitle" alignment="0" max="32767" attributes="0"/>
@@ -48,14 +48,14 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="349" max="-2" attributes="0"/>
-                      <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="191" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="230" max="32767" attributes="0"/>
-              <Component id="txtEmp_Id" min="-2" pref="144" max="-2" attributes="0"/>
+              <Component id="txtSearch" min="-2" pref="144" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="302" max="-2" attributes="0"/>
@@ -74,7 +74,7 @@
               <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtEmp_Id" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -100,7 +100,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtStartdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -128,7 +128,7 @@
                   <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="37" max="32767" attributes="0"/>
-              <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+              <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -146,7 +146,7 @@
         <Property name="text" type="java.lang.String" value="Start Date             :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtStartdate">
+    <Component class="javax.swing.JTextField" name="txtStartDate">
     </Component>
     <Component class="javax.swing.JLabel" name="lblLevel">
       <Properties>
@@ -204,10 +204,13 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtName">
     </Component>
-    <Component class="javax.swing.JButton" name="btnSave">
+    <Component class="javax.swing.JButton" name="btnUpdate">
       <Properties>
         <Property name="text" type="java.lang.String" value="Update"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtEmpId">
       <Events>
@@ -221,7 +224,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtAge">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtEmp_Id">
+    <Component class="javax.swing.JTextField" name="txtSearch">
     </Component>
     <Component class="javax.swing.JButton" name="btnSearch">
       <Properties>

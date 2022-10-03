@@ -5,6 +5,9 @@
 package UI;
 
 import Assignment_1.EmployeeHistory;
+import Assignment_1.EmployeeList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -16,10 +19,25 @@ public class updateJpanel extends javax.swing.JPanel {
      * Creates new form updateJpanel
      */
     EmployeeHistory directory;
+    EmployeeList employee;
     public updateJpanel(EmployeeHistory directory) {
         initComponents();
         
         this.directory=directory;
+       
+    }
+    
+    
+    EmployeeList searchEmployee(String id) {
+        for(EmployeeList employee:this.directory.getDirectory()) {
+            if(employee.getEmpId().matches(id)) {
+                return employee;
+            }else{
+                JOptionPane.showMessageDialog(this, "Employee ID doesn't exist. Please enter valid Employee Id.");
+            }
+            
+        }
+        return null;
     }
 
     /**
@@ -34,7 +52,7 @@ public class updateJpanel extends javax.swing.JPanel {
         lblGender = new javax.swing.JLabel();
         txtGender = new javax.swing.JTextField();
         lblStartDate = new javax.swing.JLabel();
-        txtStartdate = new javax.swing.JTextField();
+        txtStartDate = new javax.swing.JTextField();
         lblLevel = new javax.swing.JLabel();
         txtLevel = new javax.swing.JTextField();
         txtTeamInfo = new javax.swing.JTextField();
@@ -49,11 +67,11 @@ public class updateJpanel extends javax.swing.JPanel {
         lblEmpId = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
-        btnSave = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
         txtEmpId = new javax.swing.JTextField();
         lblAge = new javax.swing.JLabel();
         txtAge = new javax.swing.JTextField();
-        txtEmp_Id = new javax.swing.JTextField();
+        txtSearch = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
 
         lblGender.setText("Gender                 :");
@@ -78,7 +96,12 @@ public class updateJpanel extends javax.swing.JPanel {
 
         lblEmpId.setText("Emp id                 :");
 
-        btnSave.setText("Update");
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         txtEmpId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +144,7 @@ public class updateJpanel extends javax.swing.JPanel {
                             .addComponent(txtEmpId)
                             .addComponent(txtAge)
                             .addComponent(txtGender)
-                            .addComponent(txtStartdate)
+                            .addComponent(txtStartDate)
                             .addComponent(txtLevel)
                             .addComponent(txtTeamInfo)
                             .addComponent(txtPositionTitle)
@@ -129,11 +152,11 @@ public class updateJpanel extends javax.swing.JPanel {
                             .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(349, 349, 349)
-                        .addComponent(btnSave)))
+                        .addComponent(btnUpdate)))
                 .addContainerGap(191, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 230, Short.MAX_VALUE)
-                .addComponent(txtEmp_Id, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSearch)
                 .addGap(302, 302, 302))
@@ -149,7 +172,7 @@ public class updateJpanel extends javax.swing.JPanel {
                 .addComponent(lblTitle)
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEmp_Id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearch))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -170,7 +193,7 @@ public class updateJpanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStartDate)
-                    .addComponent(txtStartdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblLevel)
@@ -192,7 +215,7 @@ public class updateJpanel extends javax.swing.JPanel {
                     .addComponent(lblEmail)
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(btnSave))
+                .addComponent(btnUpdate))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -201,7 +224,20 @@ public class updateJpanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtEmpIdActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-             
+        
+        String findEmp = txtSearch.getText();
+        this.employee = this.searchEmployee(findEmp);
+        txtName.setText(String.valueOf(employee.getName()));
+        txtEmpId.setText(employee.getEmpId());
+        txtAge.setText(employee.getAge());
+        txtGender.setText(employee.getGender());
+        txtStartDate.setText(employee.getStartDate());
+        txtLevel.setText(employee.getLevel());
+        txtTeamInfo.setText(employee.getTeamInfo());
+        txtPositionTitle.setText(employee.getPositionTitle());
+        txtPhoneNumber.setText(employee.getPhoneNumber());
+        txtEmail.setText(employee.getEmail());
+        
 
             
 
@@ -211,10 +247,39 @@ public class updateJpanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSearchActionPerformed
 
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        
+        
+            String name=txtName.getText();
+            String employeeId=txtEmpId.getText();
+            String age=txtAge.getText();
+            String gender= txtGender.getText();
+            String startDate=txtStartDate.getText();
+            String level=txtLevel.getText();
+            String teamInfo=txtTeamInfo.getText();
+            String positionTitle=txtPositionTitle.getText();
+            String phoneNumber=txtPhoneNumber.getText();
+            String email=txtEmail.getText();
+        
+        employee.setName(name);
+        employee.setEmpId(employeeId);
+        employee.setAge(age);
+       
+        employee.setStartDate(startDate);
+        employee.setLevel(level);
+        employee.setTeamInfo(teamInfo);
+        employee.setPositionTitle(positionTitle);
+        employee.setPhoneNumber(phoneNumber);
+        employee.setEmail(email);
+        employee.setGender(gender);
+        
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSave;
     private javax.swing.JButton btnSearch;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblEmpId;
@@ -229,13 +294,13 @@ public class updateJpanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtEmpId;
-    private javax.swing.JTextField txtEmp_Id;
     private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtLevel;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPhoneNumber;
     private javax.swing.JTextField txtPositionTitle;
-    private javax.swing.JTextField txtStartdate;
+    private javax.swing.JTextField txtSearch;
+    private javax.swing.JTextField txtStartDate;
     private javax.swing.JTextField txtTeamInfo;
     // End of variables declaration//GEN-END:variables
 }

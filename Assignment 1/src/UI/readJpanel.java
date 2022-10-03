@@ -352,7 +352,7 @@ public class readJpanel extends javax.swing.JPanel {
         for(EmployeeList employee : directory.getDirectory()) {
             
             Object[] row = new Object[10];
-            row[0]= employee.getName();
+            row[0]= employee;
             row[1]=employee.getEmpId();
             row[2]=employee.getAge();
             row[3]=employee.getGender();
