@@ -24,7 +24,7 @@ public class createJpanel extends javax.swing.JPanel {
      * 
      */
     EmployeeHistory directory;
-    
+    String photo="";
     public createJpanel(EmployeeHistory directory) {
         initComponents();
         
@@ -263,7 +263,7 @@ public boolean isNumeric(String s) {
         employee.setPositionTitle(position);
         employee.setPhoneNumber(phoneNumber);
         employee.setEmail(email);
-        
+        employee.setPhoto(photo);
         
        JOptionPane.showMessageDialog(this, "Employee Information Saved");
         
@@ -310,6 +310,7 @@ public boolean isNumeric(String s) {
            ImageIcon li = new ImageIcon(selectedImagePath);
            Image image=li.getImage().getScaledInstance(lblImage.getWidth(), lblImage.getHeight(), Image.SCALE_SMOOTH);
            lblImage.setIcon(new ImageIcon(image));
+           photo = selectedImagePath;
         }
         
         

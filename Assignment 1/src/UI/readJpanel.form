@@ -67,6 +67,8 @@
                                   <Component id="txtPhoneNumber" alignment="1" min="-2" pref="169" max="-2" attributes="0"/>
                                   <Component id="txtEmail" alignment="1" min="-2" pref="169" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
+                              <Component id="lblImage" min="-2" pref="105" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -113,15 +115,23 @@
                           <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblGender" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtGender" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblGender" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtGender" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Component id="lblImage" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -374,6 +384,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblImage">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Image"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
