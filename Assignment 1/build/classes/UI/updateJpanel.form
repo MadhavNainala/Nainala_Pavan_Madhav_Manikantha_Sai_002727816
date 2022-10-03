@@ -16,8 +16,24 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="230" max="32767" attributes="0"/>
+              <Component id="txtSearch" min="-2" pref="144" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="302" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblTitle" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="349" max="-2" attributes="0"/>
+                      <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -33,37 +49,24 @@
                           <Component id="lblPhoneNumber" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtName" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtEmpId" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtAge" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtGender" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtStartDate" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtLevel" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtTeamInfo" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtPositionTitle" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtPhoneNumber" alignment="0" max="32767" attributes="0"/>
-                          <Component id="txtEmail" alignment="0" pref="169" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButton1" alignment="0" min="-2" pref="169" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtName" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtEmpId" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtAge" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtGender" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtStartDate" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtLevel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtTeamInfo" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtPositionTitle" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtPhoneNumber" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtEmail" alignment="0" pref="169" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="349" max="-2" attributes="0"/>
-                      <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="191" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="230" max="32767" attributes="0"/>
-              <Component id="txtSearch" min="-2" pref="144" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="302" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblTitle" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -127,7 +130,9 @@
                   <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -236,6 +241,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jButton1"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

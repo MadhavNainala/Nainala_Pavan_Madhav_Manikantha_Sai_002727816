@@ -230,12 +230,18 @@ public class createJpanel extends javax.swing.JPanel {
     private void txtEmpIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmpIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmpIdActionPerformed
-
+public boolean isNumeric(String s) {  
+    return s != null && s.matches("[-+]?\\d*\\.?\\d+");  
+} 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         
         String name = txtName.getText();
         String empId= txtEmpId.getText();
+        if(!isNumeric(txtAge.getText())) {
+            JOptionPane.showMessageDialog(this, "Employee Age is not number");
+            return;
+        }
         String age = txtAge.getText();
         String gender = txtGender.getText();
         String startDate = txtStartDate.getText();

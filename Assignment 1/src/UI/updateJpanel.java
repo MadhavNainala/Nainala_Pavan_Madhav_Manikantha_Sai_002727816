@@ -73,6 +73,7 @@ public class updateJpanel extends javax.swing.JPanel {
         txtAge = new javax.swing.JTextField();
         txtSearch = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         lblGender.setText("Gender                 :");
 
@@ -119,12 +120,27 @@ public class updateJpanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setText("jButton1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 230, Short.MAX_VALUE)
+                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSearch)
+                .addGap(302, 302, 302))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(349, 349, 349)
+                        .addComponent(btnUpdate))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(240, 240, 240)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -139,31 +155,20 @@ public class updateJpanel extends javax.swing.JPanel {
                             .addComponent(lblPositionTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblPhoneNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(43, 43, 43)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtName)
-                            .addComponent(txtEmpId)
-                            .addComponent(txtAge)
-                            .addComponent(txtGender)
-                            .addComponent(txtStartDate)
-                            .addComponent(txtLevel)
-                            .addComponent(txtTeamInfo)
-                            .addComponent(txtPositionTitle)
-                            .addComponent(txtPhoneNumber)
-                            .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(349, 349, 349)
-                        .addComponent(btnUpdate)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtName)
+                                .addComponent(txtEmpId)
+                                .addComponent(txtAge)
+                                .addComponent(txtGender)
+                                .addComponent(txtStartDate)
+                                .addComponent(txtLevel)
+                                .addComponent(txtTeamInfo)
+                                .addComponent(txtPositionTitle)
+                                .addComponent(txtPhoneNumber)
+                                .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)))))
                 .addContainerGap(191, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 230, Short.MAX_VALUE)
-                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSearch)
-                .addGap(302, 302, 302))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,7 +219,9 @@ public class updateJpanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEmail)
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnUpdate))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -273,13 +280,15 @@ public class updateJpanel extends javax.swing.JPanel {
         employee.setPhoneNumber(phoneNumber);
         employee.setEmail(email);
         employee.setGender(gender);
-        
+        JOptionPane.showMessageDialog(this, "Employee Profile Modified");
+
     }//GEN-LAST:event_btnUpdateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblEmpId;

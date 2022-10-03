@@ -34,7 +34,7 @@ public class searchJpanel extends javax.swing.JPanel {
     
     EmployeeList searchEmployee(String id) {
         for(EmployeeList employee:this.directory.getDirectory()) {
-            if(employee.getEmpId().matches(id)) {
+            if(employee.getEmpId().matches(id) || employee.getName().matches(id) || employee.getEmail().matches(id)) {
                 return employee;
             }else{
                 JOptionPane.showMessageDialog(this, "Employee ID doesn't exist. Please enter valid Employee Id.");
@@ -69,6 +69,7 @@ public class searchJpanel extends javax.swing.JPanel {
         txtPositionTitle = new javax.swing.JTextField();
         txtEmpId = new javax.swing.JTextField();
         lblTitle = new javax.swing.JLabel();
+        lblImage = new javax.swing.JLabel();
 
         lblAge.setText("Age                      :");
 
@@ -108,11 +109,16 @@ public class searchJpanel extends javax.swing.JPanel {
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Search Employee Deatils");
 
+        lblImage.setText("Image");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 940, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(734, Short.MAX_VALUE)
+                .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(72, 72, 72)
@@ -154,7 +160,10 @@ public class searchJpanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 595, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(430, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(40, 40, 40)
@@ -237,6 +246,7 @@ public class searchJpanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblEmpId;
     private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblImage;
     private javax.swing.JLabel lblLevel;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPhoneNumber;
