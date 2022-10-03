@@ -36,8 +36,6 @@ public class searchJpanel extends javax.swing.JPanel {
         for(EmployeeList employee:this.directory.getDirectory()) {
             if(employee.getEmpId().matches(id) || employee.getName().matches(id) || employee.getEmail().matches(id)) {
                 return employee;
-            }else{
-                JOptionPane.showMessageDialog(this, "Employee ID doesn't exist. Please enter valid Employee Id.");
             }
             
         }
@@ -221,6 +219,10 @@ public class searchJpanel extends javax.swing.JPanel {
         
         String findEmp = txtSearch.getText();
         EmployeeList employee = this.searchEmployee(findEmp);
+        if(employee==null) {
+                JOptionPane.showMessageDialog(this, "Employee ID doesn't exist. Please enter valid Employee Id.");
+                return;
+        }
         txtName.setText(String.valueOf(employee.getName()));
         txtEmpId.setText(employee.getEmpId());
         txtAge.setText(employee.getAge());

@@ -288,7 +288,7 @@ public class readJpanel extends javax.swing.JPanel {
       
     int selectedRowIndex = tblDirectory.getSelectedRow();
         if(selectedRowIndex<0){
-            JOptionPane.showMessageDialog(this, "Please select an employee profile to delete");
+            JOptionPane.showMessageDialog(this, "Please select an employee profile to View");
             return;
         }
      DefaultTableModel model = (DefaultTableModel) tblDirectory.getModel();
