@@ -1,40 +1,32 @@
- /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UI;
+package ui;
 
-import assignment.pkg2.Database;
-import assignment.pkg2.Patient;
-import assignment.pkg2.VitalSigns;
 import javax.swing.JOptionPane;
+import model.DataService;
+import model.Patient;
+import model.VitalSigns;
 
 /**
  *
- * @author pavanmadhavnainala
+ * @author madhav
  */
 public class createVitalsJpanel extends javax.swing.JPanel {
 
     
     
-    Database vital;
-    String patientId;
+    DataService vital;
     /**
      * Creates new form createVitalsJpanel
      */
-    public createVitalsJpanel(Database vital) {
+    public createVitalsJpanel(DataService vital) {
         initComponents();
         
         this.vital = vital;
         
-        vital.createDummyPatient();
-        this.cbPatient.removeAllItems();
-        for(Patient p:vital.getPatient())
-        {
-            this.cbPatient.addItem(p.getPatientId());
-            
-        }
-          patientId=(String)cbPatient.getSelectedItem();
+//        vital.createDummyPatient();
         
     }
 
@@ -92,7 +84,7 @@ public class createVitalsJpanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         lblDate = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        cbPatient = new javax.swing.JComboBox<>();
+        txtPatientId = new javax.swing.JTextField();
 
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -128,13 +120,6 @@ public class createVitalsJpanel extends javax.swing.JPanel {
 
         jDateChooser1.setForeground(new java.awt.Color(51, 51, 51));
 
-        cbPatient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbPatient.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbPatientActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -167,7 +152,7 @@ public class createVitalsJpanel extends javax.swing.JPanel {
                             .addComponent(txtBP)
                             .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                             .addComponent(txtRR)
-                            .addComponent(cbPatient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(txtPatientId))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -175,10 +160,10 @@ public class createVitalsJpanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addComponent(lblTitle)
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPatientId)
-                    .addComponent(cbPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAge)
@@ -205,7 +190,7 @@ public class createVitalsJpanel extends javax.swing.JPanel {
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addComponent(btnSave)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -242,7 +227,18 @@ public class createVitalsJpanel extends javax.swing.JPanel {
         int respirationRate = Integer.parseInt(txtRR.getText());
         String date = this.jDateChooser1.getDate().toString();
         
+        if(isEmpty(txtPatientId.getText())) {
+            JOptionPane.showMessageDialog(this, "Please enter patient id");
+            return;
+        }
         
+        
+        String patientId = txtPatientId.getText();
+        
+        
+        
+        
+        //String patientId = txtPatientId.getText();
         
         VitalSigns vs = vital.addNewVitals();
         
@@ -262,23 +258,26 @@ public class createVitalsJpanel extends javax.swing.JPanel {
         txtPulse.setText("");
         txtAge.setText("");
         txtRR.setText("");
-         
+        txtPatientId.setText("");  
         
         
+        
+        
+        
+
+
+
+
+
+
 
 
           // TODO add your handling code here:
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void cbPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPatientActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_cbPatientActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
-    private javax.swing.JComboBox<String> cbPatient;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblBP;
@@ -291,6 +290,7 @@ public class createVitalsJpanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtBP;
     private javax.swing.JTextField txtBodyTemp;
+    private javax.swing.JTextField txtPatientId;
     private javax.swing.JTextField txtPulse;
     private javax.swing.JTextField txtRR;
     // End of variables declaration//GEN-END:variables

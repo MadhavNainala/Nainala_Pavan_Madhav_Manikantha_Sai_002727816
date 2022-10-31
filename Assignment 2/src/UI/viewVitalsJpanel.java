@@ -2,17 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UI;
+package ui;
 
-import assignment.pkg2.Database;
-import assignment.pkg2.VitalSigns;
+import model.DataService;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import model.VitalSigns;
 
 /**
  *
- * @author pavanmadhavnainala
+ * @author madhav
  */
 public class viewVitalsJpanel extends javax.swing.JPanel {
 
@@ -23,9 +23,9 @@ public class viewVitalsJpanel extends javax.swing.JPanel {
      * 
      */
     
-    Database vital;
+    DataService vital;
     
-    public viewVitalsJpanel(Database vital) {
+    public viewVitalsJpanel(DataService vital) {
         initComponents();
         this.vital= vital;
         
