@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package ui;
-import ui.createVitalsJpanel;
+
 import model.DataService;
 //import ui.
 /**
@@ -139,7 +139,7 @@ public class FunctionHospitalAdmin extends javax.swing.JPanel {
     }//GEN-LAST:event_btnVSDActionPerformed
 
     private void btnVSD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVSD1ActionPerformed
-       createVitalsJpanel panel = new createVitalsJpanel(this.HAdmin);
+       VitalsJpanel panel = new VitalsJpanel(this.HAdmin);
        
 //        CreateVitalsJpanel createVitalPanel = new CreateVitalsJpanel(HAdmin);
         splitPaneFHA.setRightComponent(panel);

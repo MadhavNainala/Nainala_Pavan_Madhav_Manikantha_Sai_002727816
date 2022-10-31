@@ -67,6 +67,11 @@ public class FunctionCommunityAdmin extends javax.swing.JPanel {
         lblHospManage.setText("Hospital Management");
 
         btnHospManage.setText("Manage Hospitals");
+        btnHospManage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHospManageActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -150,6 +155,11 @@ public class FunctionCommunityAdmin extends javax.swing.JPanel {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCityManageActionPerformed
+
+    private void btnHospManageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospManageActionPerformed
+       MainHospJPanel panel = new MainHospJPanel(this.ciList);
+        jSplitPane1.setRightComponent(panel); // TODO add your handling code here:
+    }//GEN-LAST:event_btnHospManageActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

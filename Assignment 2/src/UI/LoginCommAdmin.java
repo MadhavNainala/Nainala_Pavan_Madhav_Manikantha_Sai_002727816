@@ -4,6 +4,7 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import model.CommunityAdmin;
 import model.DataService;
 
@@ -144,14 +145,14 @@ public class LoginCommAdmin extends javax.swing.JPanel {
         String caUsername = txtCAUsername.getText();
         String caPassword = txtCAPassword.getText();
         CommunityAdmin ca = this.searchCommunityAdmin(caUsername,caPassword);
-        //HospitalAdmin hap = this.searchHospitalAdmin(haPassword);
-        /* if(hau==null) {
+       // CommunityAdmin hap = this.searchHospitalAdmin(haPassword);
+         if(ca==null) {
 
-            JOptionPane.showMessageDialog(this, "Hospital ID does not exist! Please give valid Hospital Id.");return;
-        }else{*/
+            JOptionPane.showMessageDialog(this, "Community ID does not exist! Please give valid Hospital Id.");return;
+        }else{
             FunctionCommunityAdmin fcaPanel = new FunctionCommunityAdmin(cAdmin);
             jSplitPane1.setRightComponent(fcaPanel);
-            // }
+             }
     }//GEN-LAST:event_btnCALoginActionPerformed
 
     private void txtCAUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCAUsernameActionPerformed

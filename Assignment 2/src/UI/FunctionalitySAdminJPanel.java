@@ -245,7 +245,7 @@ public class FunctionalitySAdminJPanel extends javax.swing.JPanel {
 
     private void btnCommMgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCommMgActionPerformed
         // TODO add your handling code here:
-        CommunityJPanel panel = new CommunityJPanel(this.d);
+        FunctionCommunityAdmin panel = new FunctionCommunityAdmin(this.d);
         this.splitFP.setRightComponent(panel);
     }//GEN-LAST:event_btnCommMgActionPerformed
 
@@ -257,8 +257,8 @@ public class FunctionalitySAdminJPanel extends javax.swing.JPanel {
 
     private void btnVitMgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVitMgActionPerformed
         // TODO add your handling code here:
-        viewVitalsJpanel panel = new viewVitalsJpanel(this.d);
-        this.splitFP.setRightComponent(panel);
+//        viewVitalsJpanel panel = new viewVitalsJpanel(this.d);
+//        this.splitFP.setRightComponent(panel);
     }//GEN-LAST:event_btnVitMgActionPerformed
 
 

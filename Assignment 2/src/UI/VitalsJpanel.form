@@ -16,20 +16,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jSplitPane1" alignment="0" max="32767" attributes="0"/>
+          <Component id="splitPane" alignment="0" pref="400" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jSplitPane1" max="32767" attributes="0"/>
-          </Group>
+          <Component id="splitPane" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JSplitPane" name="jSplitPane1">
+    <Container class="javax.swing.JSplitPane" name="splitPane">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout"/>
       <SubComponents>
@@ -44,20 +41,15 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblHospManage" alignment="1" max="32767" attributes="0"/>
+                          <Component id="btnUpdateVitals" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="btnCommManage" max="32767" attributes="0"/>
-                                      <Component id="lblCommManage" max="32767" attributes="0"/>
-                                      <Component id="lblCityManage" max="32767" attributes="0"/>
-                                      <Component id="btnCityManage" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="btnHospManage" min="-2" pref="143" max="-2" attributes="0"/>
+                                  <Component id="btnViewVitals" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnCreateVitals" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -67,64 +59,40 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="lblCommManage" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="btnCreateVitals" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnCommManage" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblCityManage" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="btnViewVitals" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnCityManage" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblHospManage" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnHospManage" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                      <Component id="btnUpdateVitals" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="153" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblCommManage">
+            <Component class="javax.swing.JButton" name="btnCreateVitals">
               <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Community Management"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnCommManage">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Manage Communities"/>
+                <Property name="text" type="java.lang.String" value="Create Vitals"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCommManageActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateVitalsActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblCityManage">
+            <Component class="javax.swing.JButton" name="btnViewVitals">
               <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="City Management"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnCityManage">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Manage Cities"/>
+                <Property name="text" type="java.lang.String" value="View Vitals"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCityManageActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewVitalsActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblHospManage">
+            <Component class="javax.swing.JButton" name="btnUpdateVitals">
               <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Hospital Management"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnHospManage">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Manage Hospitals"/>
+                <Property name="text" type="java.lang.String" value="Update Vitals"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHospManageActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateVitalsActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -144,7 +112,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="294" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
