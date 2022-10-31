@@ -4,6 +4,7 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import model.DataService;
 import model.Doctor;
 import model.HospitalAdmin;
@@ -140,13 +141,13 @@ public class LoginDoctorJPanel extends javax.swing.JPanel {
         String haPassword = txtPassLD.getText();
         Doctor hau = this.searchDoctor(haUsername,haPassword);
         //HospitalAdmin hap = this.searchHospitalAdmin(haPassword);
-        /* if(hau==null) {
+        if(hau==null) {
 
             JOptionPane.showMessageDialog(this, "Hospital ID does not exist! Please give valid Hospital Id.");return;
-        }else{*/
+        }else{
             FunctionDoctorJPanel fhaPanel = new FunctionDoctorJPanel(HAdmin);
             splitPaneLD.setRightComponent(fhaPanel);
-            // }
+             }
     }//GEN-LAST:event_btnHALoginActionPerformed
 
 

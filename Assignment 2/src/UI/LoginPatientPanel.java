@@ -178,13 +178,13 @@ public class LoginPatientPanel extends javax.swing.JPanel {
         String pPassword = txtPPassword.getText();
         Patient hap = this.searchPatient(pUsername,pPassword);
         //Patient hap = this.searchPatient(haPassword);
-        //f(hap==null) {
+        if(hap==null) {
 
-           // JOptionPane.showMessageDialog(this, "Hospital ID does not exist! Please give valid Hospital Id.");return;
-        //}else{
+           JOptionPane.showMessageDialog(this, "Patient ID does not exist! Please give valid Patient Id.");return;
+        }else{
           FunctionPatientJPanel fhaPanel = new FunctionPatientJPanel(HAdmin);
           splitPaneHALogin.setRightComponent(fhaPanel);
-           //  }
+            }
     }//GEN-LAST:event_btnHALoginActionPerformed
 
 

@@ -190,6 +190,7 @@ public class CreateDocJPanel extends javax.swing.JPanel {
             txtHospID.setText("");
             txtDocUN.setText("");
             txtHospID.setText("");
+            txtDocPass.setText("");
             
         }
         else{
