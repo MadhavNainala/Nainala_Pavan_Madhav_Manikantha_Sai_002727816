@@ -15,17 +15,18 @@ public class Community {
     String cityID;
     // code needed list(city)
 
-    public Community() {
-        this.communityName = "ST Alphonsus";
-        this.communityID = "123";
-        this.cityID = "123 - Hyderabad";
-    }
+    
 
     public Community(String community, String communityID, String cityID) {
         this.communityName = communityName;
         this.communityID = communityID;
         this.cityID = cityID;
     }
+
+    public Community() {
+    }
+    
+    
     
     
     public String getCommunityName() {

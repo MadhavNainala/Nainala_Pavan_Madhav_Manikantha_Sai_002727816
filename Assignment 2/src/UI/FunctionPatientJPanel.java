@@ -35,13 +35,11 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
 
         splitFP = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         btnVD = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         btnEPI = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         workAreaFP = new javax.swing.JPanel();
-
-        jLabel1.setText("Manage Encounter By Patient");
 
         btnVD.setText("View the Doctors");
         btnVD.addActionListener(new java.awt.event.ActionListener() {
@@ -50,12 +48,24 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setText("View the Doctor");
-
         btnEPI.setText("Encounter By Patient ID");
         btnEPI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEPIActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Create Patient");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("View/Update Patient");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -65,35 +75,25 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnVD, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addGroup(controlPanelLayout.createSequentialGroup()
-                            .addGap(35, 35, 35)
-                            .addComponent(jLabel2))))
-                .addContainerGap(35, Short.MAX_VALUE))
-            .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(controlPanelLayout.createSequentialGroup()
-                    .addGap(16, 16, 16)
-                    .addComponent(btnEPI)
-                    .addContainerGap(26, Short.MAX_VALUE)))
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnVD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEPI, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel1)
-                .addGap(67, 67, 67)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(23, 23, 23)
+                .addComponent(btnEPI)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnVD)
-                .addContainerGap(133, Short.MAX_VALUE))
-            .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(controlPanelLayout.createSequentialGroup()
-                    .addGap(52, 52, 52)
-                    .addComponent(btnEPI)
-                    .addContainerGap(214, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         splitFP.setLeftComponent(controlPanel);
@@ -141,13 +141,26 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
         splitFP.setRightComponent(encounterPanel);
     }//GEN-LAST:event_btnEPIActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                  CreatePatientJPanel encounterPanel = new CreatePatientJPanel(this.HAdmin);
+                 splitFP.setRightComponent(encounterPanel); // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+               ViewPatientInfoJPanel encounterPanel = new ViewPatientInfoJPanel(this.HAdmin);
+                 splitFP.setRightComponent(encounterPanel);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEPI;
     private javax.swing.JButton btnVD;
     private javax.swing.JPanel controlPanel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JSplitPane splitFP;
     private javax.swing.JPanel workAreaFP;
     // End of variables declaration//GEN-END:variables

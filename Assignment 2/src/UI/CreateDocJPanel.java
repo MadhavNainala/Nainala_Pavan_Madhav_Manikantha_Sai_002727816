@@ -17,7 +17,7 @@ public class CreateDocJPanel extends javax.swing.JPanel {
      * Creates new form CreateDocJPanel
      */
     DataService doctr;
-    public CreateDocJPanel() {
+    public CreateDocJPanel(DataService doctr) {
         initComponents();
         
         this.doctr=doctr;

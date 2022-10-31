@@ -249,6 +249,7 @@ public class CommunityJPanel extends javax.swing.JPanel {
         
         txtCommunity.setText("");
         txtCID.setText("");
+        txtCityId.setText("");
         
         //for (int selectedRowIndex = tblCommunity.getRowCount() -1; selectedRowIndex>=0; selectedRowIndex--){
         //    community.removeRow(selectedRowIndex);
@@ -407,7 +408,8 @@ public class CommunityJPanel extends javax.swing.JPanel {
             
             row[0] = vs;
             row[1] = vs.getCommunityID();
-//            row[2]= vs.setCityID();
+            row[2]= vs.getCityID();
+            
             
             // code needed list(city)
             
