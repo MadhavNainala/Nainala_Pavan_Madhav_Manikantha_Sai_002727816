@@ -89,6 +89,11 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         });
 
         txtPwd.setText(" ");
+        txtPwd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPwdActionPerformed(evt);
+            }
+        });
 
         txtPatientName.setText(" ");
         txtPatientName.addActionListener(new java.awt.event.ActionListener() {
@@ -252,7 +257,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         p.setPatientName(patientname);
         p.setPatientId(patientid);
         p.setUserName(Username);
-        p.setPwd(hospid);
+        p.setPwd(password);
         
         
         JOptionPane.showMessageDialog(this,"New Patient  Added");
@@ -269,6 +274,10 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
 
        
     }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void txtPwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPwdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPwdActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
