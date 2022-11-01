@@ -37,7 +37,7 @@ public class ViewPatientInfoJPanel extends javax.swing.JPanel {
      * Creates new form ViewPatientInfoJPanel
      */
     //PatientDirectory Pdir;
-    static DataService d;
+     DataService d;
     //ArrayList<Patient> patientList;
     public ViewPatientInfoJPanel(DataService d) {
         initComponents();
@@ -46,88 +46,11 @@ public class ViewPatientInfoJPanel extends javax.swing.JPanel {
        
         //this.patientList=Pdir.getPatient();
          populateTable();
-          txtUserName.setName("UserName");
-        txtPwd.setName("Password");
-        txtPatientId.setName("PatientId");
-        txtPatientName.setName("PatientName");
-        txtHouseName.setName("HouseId");
-        txtCommId.setName("CommunityId");
-        txtHospId.setName("HospitalId");
-//        txtPatientId.setName("PatientId");
-//        txtPatientName.setName("PatientName");
-//          txtHouseName.setName("HouseName");
-
-//        txtDob.setName("Dob");
-//        txtGender.setName("Gender");
-//        txtCommunityId.setName("CommunityId");
-//        txthouseId.setName("HouseId");
-//        txtCity.setName("City");
-//        txtState.setName("StateName");
-//        txtCommunityName.setName("CommunityName");
-//        txtCountry.setName("Country");
-//        txtZip.setName("ZipCode");
-//        txtRole.setName("Role");
-      //  txtHouseName.setName("HouseName");
-//        txtCell.setName("ContactNumber");
-//        txtStAdd.setName("StreetAddress");
-        /*for(Patient  p:Pdir.getPat())
-           {            
-               System.out.println(p);
-               System.out.println("*******");
-           }*/
-        
+          
     }
     
     
-    public boolean  DataValidation(JComponent input)
-    {
-        String name=input.getName();
-         
-        String Errormsg="";
-        boolean error=false;
-        String textEntered = ((JTextField)input).getText().replace(" ","");
-
-        System.out.print(textEntered);
-                
-        if (textEntered == null || textEntered.isEmpty()) {
-             error = true;
-            Errormsg = String.format("Please enter a value. The value for %s cannot be empty", name);
-
-        } 
-        else {
-            switch (name) {
-                case "UserName":  
-                case "PatientName":
-                case "PatientId":
-                case "HouseId":
-                case "CommunitId":
-                case "HospitalId":
-                 
-                    if (!textEntered.matches("^[a-zA-Z0-9]+$")) {
-                        error = true;
-                        Errormsg = String.format("Please enter a valid %s", name);
-                    }
-                   break;
-                case "Password":
-                    if (!textEntered.matches("^(?=.*[0-9])"
-                       + "(?=.*[a-z])(?=.*[A-Z])"
-                       + "(?=.*[@#$%^&+=])"
-                       + "(?=\\S+$).{8,20}$")) {
-                        error = true;
-                        Errormsg = String.format("Please enter a valid %s", name);
-                    }
-//                
-                default:
-                    break;
-            }
-        }
-        if (error) {
-            JOptionPane.showMessageDialog(this, Errormsg);
-            return false;
-        }
-        return true;
-        
-    }     
+     
 //     public boolean  DataValidation(JComponent input)
 //    {
 //        
@@ -481,17 +404,7 @@ public class ViewPatientInfoJPanel extends javax.swing.JPanel {
         String commid=this.txtCommId.getText().trim();
        String pwd=this.txtPwd.getText().trim();
   
-        JTextField[] VARIABLE_CONSTANTS = {txtPatientName,txtPatientId,txtUserName,txtHospId,txtHouseName,txtCommId};
-        boolean DataValidated = false;
-            for (JTextField var : VARIABLE_CONSTANTS) {
-                if (!DataValidation(var)) {
-                    DataValidated = false;
-                    break;
-                } else {
-                    DataValidated = true;
-                    System.out.println("Validated");
-                }
-            }
+        
             //ArrayList<Patient> patients= new ArrayList<Patient>();
           SelPat.setCommunityId(commid);
           SelPat.setHospId(hospid);

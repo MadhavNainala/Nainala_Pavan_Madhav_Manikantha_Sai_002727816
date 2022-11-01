@@ -257,8 +257,8 @@ public class FunctionalitySAdminJPanel extends javax.swing.JPanel {
 
     private void btnVitMgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVitMgActionPerformed
         // TODO add your handling code here:
-//        viewVitalsJpanel panel = new viewVitalsJpanel(this.d);
-//        this.splitFP.setRightComponent(panel);
+        VitalsJpanel panel = new VitalsJpanel(this.d);
+        this.splitFP.setRightComponent(panel);
     }//GEN-LAST:event_btnVitMgActionPerformed
 
 

@@ -260,6 +260,12 @@ public class DataService {
     }
     
     
+     public Patient addPatients(){
+        Patient p= new Patient();
+        this.patient.add(p);
+        return p;
+    }
+     
      
     
 }
