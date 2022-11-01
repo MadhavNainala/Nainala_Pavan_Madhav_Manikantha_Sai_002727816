@@ -26,21 +26,13 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         initComponents();
         this.ds=ds;
       
-        ds.createDummyComm();
-        this.cbCommunity.removeAllItems();
-        for(Community c:ds.getComm())
-        {
-            this.cbCommunity.addItem(c.getCommunityName());
-            
-        }
-          comid=(String)cbCommunity.getSelectedItem();
         
         txtUserName.setName("UserName");
         txtPwd.setName("Password");
         txtPatientId.setName("PatientId");
         txtPatientName.setName("PatientName");
         txtHouseName.setName("HouseId");
-        //txtCommId.setName("CommunityId");
+        txtCommId.setName("CommunityId");
         txtHospId.setName("HospitalId");
         
 
@@ -118,7 +110,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         txtHouseName = new javax.swing.JTextField();
         txtHospId = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
-        cbCommunity = new javax.swing.JComboBox<>();
+        txtCommId = new javax.swing.JTextField();
 
         jLabel1.setText("Add Patient Details");
 
@@ -165,13 +157,6 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
             }
         });
 
-        cbCommunity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "" }));
-        cbCommunity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCommunityActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -199,7 +184,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
                             .addComponent(txtPatientId)
                             .addComponent(txtHouseName)
                             .addComponent(txtHospId)
-                            .addComponent(cbCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtCommId)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(146, 146, 146)
                         .addComponent(btnSave)))
@@ -233,12 +218,12 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblCommId)
-                    .addComponent(cbCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(txtCommId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHospId)
                     .addComponent(txtHospId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(btnSave)
                 .addContainerGap())
         );
@@ -305,15 +290,9 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void cbCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCommunityActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_cbCommunityActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
-    private javax.swing.JComboBox<String> cbCommunity;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblCommId;
     private javax.swing.JLabel lblHospId;
@@ -322,6 +301,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblPatientName;
     private javax.swing.JLabel lblPwd;
     private javax.swing.JLabel lblUserName;
+    private javax.swing.JTextField txtCommId;
     private javax.swing.JTextField txtHospId;
     private javax.swing.JTextField txtHouseName;
     private javax.swing.JTextField txtPatientId;

@@ -197,25 +197,9 @@ public class DataService {
         
     }
      
-    public void createDummyComm()
-    {
-        
-        for(int i=0;i<5;i++)
-        {
-            String is = String.valueOf(i);
-            this.comm.add(new Community("ComName "+is, "CommId"+is, "cityId "+is));
-        }
-    }
     
-    public void createDummyPatient()
-    {
-        
-        for(int i=0;i<5;i++)
-        {
-            String is = String.valueOf(i);
-            this.patient.add(new Patient("ComName "+is, "CommId"+is, "cityId "+is, "cityId "+is, "cityId "+is, "cityId "+is, "cityId "+is));
-        }
-    }
+    
+    
      public void AddVitals(VitalSigns v)
     {
         this.vital.add(v);

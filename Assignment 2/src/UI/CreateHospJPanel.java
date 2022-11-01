@@ -29,17 +29,7 @@ public class CreateHospJPanel extends javax.swing.JPanel {
 //        }
 //        
 
-         hosp.createDummyComm();
-         this.cbCommId.removeAllItems();
-         for(Community cd:hosp.getCommunity())
-         {
-             this.cbCommId.addItem(cd.getCommunityID());
-             
-         }
          
-         commId=(String)cbCommId.getSelectedItem();
-        
-        
         
     }
 
@@ -60,8 +50,6 @@ public class CreateHospJPanel extends javax.swing.JPanel {
         lbHospID = new javax.swing.JLabel();
         lbHospName = new javax.swing.JLabel();
         lbCommunityID2 = new javax.swing.JLabel();
-        cbCommId = new javax.swing.JComboBox<>();
-        lbCommunityID = new javax.swing.JLabel();
 
         txtHospId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,15 +74,6 @@ public class CreateHospJPanel extends javax.swing.JPanel {
 
         lbCommunityID2.setText("Community ID :");
 
-        cbCommId.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbCommId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbCommIdActionPerformed(evt);
-            }
-        });
-
-        lbCommunityID.setText("Community ID :");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -109,11 +88,9 @@ public class CreateHospJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lbCommunityID2)
                             .addComponent(lbHospName)
-                            .addComponent(lbHospID)
-                            .addComponent(lbCommunityID))
+                            .addComponent(lbHospID))
                         .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cbCommId, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtHospId)
                             .addComponent(txtHospName)
                             .addComponent(txtCommId, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
@@ -141,13 +118,9 @@ public class CreateHospJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbCommunityID2)
                     .addComponent(txtCommId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbCommId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbCommunityID))
-                .addGap(18, 18, 18)
+                .addGap(47, 47, 47)
                 .addComponent(btnSave)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -177,8 +150,8 @@ public class CreateHospJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Hospital Name should not empty");
             return;
         }
-    String communityId = txtCommId.getText();
-    String communityID = getCommunityByName((String)this.cbCommId.getSelectedItem());
+    String communityID = txtCommId.getText();
+    
     
     Hospital hp = hosp.addNewHosp();
     hp.setHospitalId(hospitalId);
@@ -192,16 +165,9 @@ public class CreateHospJPanel extends javax.swing.JPanel {
     txtCommId.setText("");
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void cbCommIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCommIdActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_cbCommIdActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
-    private javax.swing.JComboBox<String> cbCommId;
-    private javax.swing.JLabel lbCommunityID;
     private javax.swing.JLabel lbCommunityID2;
     private javax.swing.JLabel lbCreateHosp;
     private javax.swing.JLabel lbHospID;
