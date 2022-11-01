@@ -128,7 +128,7 @@ public class ViewEncounterHistoryByPatientPanel extends javax.swing.JPanel {
 
         txtRespRate.setText(" ");
 
-        btnSaveVitals1.setText("Save");
+        btnSaveVitals1.setText("View");
         btnSaveVitals1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveVitals1ActionPerformed(evt);

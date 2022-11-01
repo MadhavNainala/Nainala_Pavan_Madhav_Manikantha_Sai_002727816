@@ -19,6 +19,7 @@ public class LoginDoctorJPanel extends javax.swing.JPanel {
      * Creates new form LoginDoctorJPanel
      */
     DataService HAdmin;
+    Doctor p;
     public LoginDoctorJPanel(DataService HAdmin) {
         initComponents();
         this.HAdmin = HAdmin;
@@ -140,13 +141,14 @@ public class LoginDoctorJPanel extends javax.swing.JPanel {
         String haUsername = txtUsrLD.getText();
         String haPassword = txtPassLD.getText();
         Doctor hau = this.searchDoctor(haUsername,haPassword);
+        this.p = hau;
         //HospitalAdmin hap = this.searchHospitalAdmin(haPassword);
         if(hau==null) {
 
             JOptionPane.showMessageDialog(this, "Hospital ID does not exist! Please give valid Hospital Id.");return;
         }else{
-            FunctionDocJPanel fhaPanel = new FunctionDocJPanel(HAdmin);
-            splitPaneLD.setRightComponent(fhaPanel);
+            FunctionDocJPanel fhaPanel = new FunctionDocJPanel(this.p, HAdmin);
+                splitPaneLD.setRightComponent(fhaPanel);
              }
     }//GEN-LAST:event_btnHALoginActionPerformed
 

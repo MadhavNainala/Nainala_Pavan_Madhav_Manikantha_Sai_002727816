@@ -18,9 +18,10 @@ public class FunctionDocJPanel extends javax.swing.JPanel {
      */
     Doctor p;
     DataService HAdmin;
-    public FunctionDocJPanel(DataService HAdmin) {
+    public FunctionDocJPanel(Doctor p, DataService HAdmin) {
         initComponents();
         this.HAdmin=HAdmin;
+        this.p=p;
     }
 
     /**

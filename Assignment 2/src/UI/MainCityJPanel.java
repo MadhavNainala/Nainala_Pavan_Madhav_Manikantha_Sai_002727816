@@ -38,7 +38,7 @@ DataService hosp;
         btnCreateHosp = new javax.swing.JButton();
         workAreaMH = new javax.swing.JPanel();
 
-        btnViewHosp.setText("View/Delete");
+        btnViewHosp.setText("Create");
         btnViewHosp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewHospActionPerformed(evt);
@@ -52,7 +52,7 @@ DataService hosp;
             }
         });
 
-        btnCreateHosp.setText("Create");
+        btnCreateHosp.setText("View/Update");
         btnCreateHosp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateHospActionPerformed(evt);
@@ -64,30 +64,25 @@ DataService hosp;
         controlPanelMHLayout.setHorizontalGroup(
             controlPanelMHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelMHLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(controlPanelMHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnViewHosp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnUpdateHosp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(controlPanelMHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(controlPanelMHLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnUpdateHosp, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCreateHosp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnViewHosp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(controlPanelMHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelMHLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(btnCreateHosp, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                    .addContainerGap()))
         );
         controlPanelMHLayout.setVerticalGroup(
             controlPanelMHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelMHLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(36, 36, 36)
                 .addComponent(btnViewHosp)
+                .addGap(16, 16, 16)
+                .addComponent(btnCreateHosp)
                 .addGap(18, 18, 18)
                 .addComponent(btnUpdateHosp)
                 .addContainerGap(151, Short.MAX_VALUE))
-            .addGroup(controlPanelMHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(controlPanelMHLayout.createSequentialGroup()
-                    .addGap(35, 35, 35)
-                    .addComponent(btnCreateHosp)
-                    .addContainerGap(231, Short.MAX_VALUE)))
         );
 
         splitPaneMH.setLeftComponent(controlPanelMH);
@@ -125,7 +120,7 @@ DataService hosp;
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 405, Short.MAX_VALUE)
+            .addGap(0, 417, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)

@@ -17,11 +17,9 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
      * Creates new form FunctionPatientJPanel
      */
     DataService HAdmin;
-    Patient p;
     public FunctionPatientJPanel(DataService HAdmin) {
         initComponents();
         this.HAdmin = HAdmin;
-        this.p=p;
     }
 
     /**
@@ -35,25 +33,9 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
 
         splitFP = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
-        btnVD = new javax.swing.JButton();
-        btnEPI = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         workAreaFP = new javax.swing.JPanel();
-
-        btnVD.setText("View the Doctors");
-        btnVD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVDActionPerformed(evt);
-            }
-        });
-
-        btnEPI.setText("Encounter By Patient ID");
-        btnEPI.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEPIActionPerformed(evt);
-            }
-        });
 
         jButton1.setText("Create Patient");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -76,20 +58,14 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnVD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEPI, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(btnEPI)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnVD)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(81, 81, 81)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
@@ -129,18 +105,6 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnVDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVDActionPerformed
-        // TODO add your handling code here:
-      ViewDocJPanel encounterPanel = new ViewDocJPanel(this.HAdmin);
-      splitFP.setRightComponent(encounterPanel);
-    }//GEN-LAST:event_btnVDActionPerformed
-
-    private void btnEPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEPIActionPerformed
-        // TODO add your handling code here:
-        ViewEncounterHistoryByPatientPanel encounterPanel = new ViewEncounterHistoryByPatientPanel(this.p,this.HAdmin);
-        splitFP.setRightComponent(encounterPanel);
-    }//GEN-LAST:event_btnEPIActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
                   CreatePatientJPanel encounterPanel = new CreatePatientJPanel(this.HAdmin);
                  splitFP.setRightComponent(encounterPanel); // TODO add your handling code here:
@@ -156,8 +120,6 @@ public class FunctionPatientJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEPI;
-    private javax.swing.JButton btnVD;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

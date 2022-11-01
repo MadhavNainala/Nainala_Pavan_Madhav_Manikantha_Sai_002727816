@@ -178,7 +178,8 @@ public class LoginPatientPanel extends javax.swing.JPanel {
         String pUsername = txtPUsername.getText();
         String pPassword = txtPPassword.getText();
         Patient hap = this.searchPatient(pUsername,pPassword);
-        //Patient hap = this.searchPatient(haPassword);
+        this.p = hap;
+//        Patient hap = this.searchPatient(haPassword);
         if(hap==null) {
 
            JOptionPane.showMessageDialog(this, "Patient ID does not exist! Please give valid Patient Id.");return;

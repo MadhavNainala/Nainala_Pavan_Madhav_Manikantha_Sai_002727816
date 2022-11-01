@@ -281,7 +281,10 @@ Doctor p;
     }//GEN-LAST:event_btnSaveVitals1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+          
+            JOptionPane.showMessageDialog(this, "Diagnosed!!\nHave a nice day!!");
+
+                // TODO add your handling code here:
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
