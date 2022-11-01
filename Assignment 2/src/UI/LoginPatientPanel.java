@@ -20,6 +20,7 @@ public class LoginPatientPanel extends javax.swing.JPanel {
      */
     
     DataService HAdmin;
+    Patient p;
     public LoginPatientPanel(DataService HAdmin) {
         initComponents();
         this.HAdmin = HAdmin;
@@ -182,7 +183,7 @@ public class LoginPatientPanel extends javax.swing.JPanel {
 
            JOptionPane.showMessageDialog(this, "Patient ID does not exist! Please give valid Patient Id.");return;
         }else{
-          FunctionPatientJPanel fhaPanel = new FunctionPatientJPanel(HAdmin);
+          FunctionPatJPanel fhaPanel = new FunctionPatJPanel(this.p,HAdmin);
           splitPaneHALogin.setRightComponent(fhaPanel);
             }
     }//GEN-LAST:event_btnHALoginActionPerformed
