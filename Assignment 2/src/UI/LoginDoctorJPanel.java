@@ -145,7 +145,7 @@ public class LoginDoctorJPanel extends javax.swing.JPanel {
 
             JOptionPane.showMessageDialog(this, "Hospital ID does not exist! Please give valid Hospital Id.");return;
         }else{
-            FunctionDoctorJPanel fhaPanel = new FunctionDoctorJPanel(HAdmin);
+            FunctionDocJPanel fhaPanel = new FunctionDocJPanel(HAdmin);
             splitPaneLD.setRightComponent(fhaPanel);
              }
     }//GEN-LAST:event_btnHALoginActionPerformed
