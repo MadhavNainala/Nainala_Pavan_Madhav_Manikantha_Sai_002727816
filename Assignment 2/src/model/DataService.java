@@ -264,6 +264,18 @@ public class DataService {
     public void deleteSysA(SystemAdmin selectedSysA){
         this.SAdmin.remove(selectedSysA);
     }
+    
+    public CommunityAdmin addCAdmins(){
+        CommunityAdmin newca= new CommunityAdmin();
+        this.CAdmin.add(newca);
+        return newca;
+    }
+    
+    public void deleteCAdmins(CommunityAdmin selectedCA){
+        this.CAdmin.remove(selectedCA);
+    }
+    
+    
      
     
 }

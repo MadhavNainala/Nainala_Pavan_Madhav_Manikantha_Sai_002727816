@@ -233,7 +233,7 @@ public class FunctionalitySAdminJPanel extends javax.swing.JPanel {
 
     private void btnCommAMgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCommAMgActionPerformed
         // TODO add your handling code here:
-        FunctionCommunityAdmin panel = new FunctionCommunityAdmin(this.d);
+        CommunityAdminJpanel panel = new CommunityAdminJpanel(this.d);
         this.splitFP.setRightComponent(panel);
     }//GEN-LAST:event_btnCommAMgActionPerformed
 

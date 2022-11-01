@@ -45,10 +45,6 @@ public class ViewDocJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDoc = new javax.swing.JTable();
         btnDeleteDoc = new javax.swing.JButton();
-        lblDocHospUN = new javax.swing.JLabel();
-        txtDocUN = new javax.swing.JTextField();
-        lblDocPass = new javax.swing.JLabel();
-        txtDocPass = new javax.swing.JTextField();
 
         btnViewDoc.setText("View");
         btnViewDoc.addActionListener(new java.awt.event.ActionListener() {
@@ -91,18 +87,6 @@ public class ViewDocJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblDocHospUN.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblDocHospUN.setText("Doctor Username :");
-
-        lblDocPass.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblDocPass.setText("Doctor Password :");
-
-        txtDocPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDocPassActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -117,7 +101,7 @@ public class ViewDocJPanel extends javax.swing.JPanel {
                         .addComponent(btnViewDoc)
                         .addGap(72, 72, 72)
                         .addComponent(btnDeleteDoc)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -129,15 +113,7 @@ public class ViewDocJPanel extends javax.swing.JPanel {
                     .addComponent(txtDocName)
                     .addComponent(txtDocID)
                     .addComponent(txtHospID, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblDocPass)
-                    .addComponent(lblDocHospUN))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDocUN, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDocPass, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19))
+                .addGap(19, 338, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(212, 212, 212)
@@ -148,29 +124,19 @@ public class ViewDocJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(54, 54, 54)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnViewDoc)
-                            .addComponent(btnDeleteDoc))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblDocName)
-                            .addComponent(txtDocName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblDocID)
-                            .addComponent(txtDocID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblDocHospUN)
-                            .addComponent(txtDocUN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblDocPass)
-                            .addComponent(txtDocPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnViewDoc)
+                    .addComponent(btnDeleteDoc))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDocName)
+                    .addComponent(txtDocName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDocID)
+                    .addComponent(txtDocID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHospID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -197,8 +163,8 @@ public class ViewDocJPanel extends javax.swing.JPanel {
             txtDocName.setText(selectedDoctor.getDocName());
             txtDocID.setText(String.valueOf(selectedDoctor.getDocID()));
             txtHospID.setText(selectedDoctor.getHospID());
-            txtDocUN.setText(String.valueOf(selectedDoctor.getDocUsername()));
-            txtDocPass.setText(selectedDoctor.getDocPass());
+            //txtDocUN.setText(String.valueOf(selectedDoctor.getDocUsername()));
+            //txtDocPass.setText(selectedDoctor.getDocPass());
         }
         else{
             JOptionPane.showMessageDialog(this,"Row empty.");
@@ -225,26 +191,18 @@ public class ViewDocJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnDeleteDocActionPerformed
 
-    private void txtDocPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDocPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDocPassActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDeleteDoc;
     private javax.swing.JButton btnViewDoc;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblDocHospUN;
     private javax.swing.JLabel lblDocID;
     private javax.swing.JLabel lblDocName;
-    private javax.swing.JLabel lblDocPass;
     private javax.swing.JLabel lblHospID;
     private javax.swing.JLabel lblViewDoctor;
     private javax.swing.JTable tblDoc;
     private javax.swing.JTextField txtDocID;
     private javax.swing.JTextField txtDocName;
-    private javax.swing.JTextField txtDocPass;
-    private javax.swing.JTextField txtDocUN;
     private javax.swing.JTextField txtHospID;
     // End of variables declaration//GEN-END:variables
 private void populateTable() {
@@ -252,12 +210,11 @@ private void populateTable() {
         model.setRowCount(0);
         
         for(Doctor dr : doctr.getDoctr()){
-            Object[] row = new Object[5];
+            Object[] row = new Object[3];
             row[0] = dr;
             row[1] = dr.getDocID();
             row[2] = dr.getHospID();
-            row[3] = dr.getDocUsername();
-            row[4] = dr.getDocPass();
+            
             model.addRow(row);
         }
     }
